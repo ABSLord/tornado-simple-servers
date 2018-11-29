@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
@@ -34,3 +36,7 @@ def start_http_server():
     http_server.listen(options.port, options.host)
     log.info(f'Server started {options.host}:{options.port}')
     IOLoop.instance().start()
+
+
+if __name__ == "__main__":
+    start_http_server()
