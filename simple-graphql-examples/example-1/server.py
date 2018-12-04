@@ -9,7 +9,8 @@ class Application(tornado.web.Application):
 
     def __init__(self):
         handlers = [
-            (r'/post', TornadoGraphQLHandler, dict(graphiql=True, schema=post_schema))
+            (r'/post', TornadoGraphQLHandler, dict(graphiql=True,
+                                                   schema=post_schema))
         ]
         tornado.web.Application.__init__(self, handlers)
 
